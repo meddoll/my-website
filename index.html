@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Магазин</h1>
+        <div class="auth">
+            <button onclick="showRegisterWindow()">Регистрация</button>
+            <button onclick="showLoginWindow()">Войти</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="main-window" class="window">
+            <h2>Регистрация</h2>
+            <form id="register-form">
+                <input type="email" id="register-email" placeholder="Email" required>
+                <input type="password" id="register-password" placeholder="Пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+
+        <div id="login-window" class="window" style="display: none;">
+            <h2>Вход</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+
+        <div id="admin-panel" class="window" style="display: none;">
+            <h2>Админ-Панель</h2>
+            <form id="add-product-form">
+                <input type="text" id="product-name" placeholder="Название товара" required>
+                <input type="file" id="product-image" required>
+                <textarea id="product-description" placeholder="Описание товара" required></textarea>
+                <input type="number" id="product-price" placeholder="Цена" required>
+                <button type="submit">Добавить товар</button>
+            </form>
+
+            <div id="product-list"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Магазин</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
